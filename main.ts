@@ -3,10 +3,17 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     povoleno = true
     basic.showIcon(IconNames.Yes)
 })
-function on_logo_pressed() {
-    let steny = 10
-}
-
+input.onGesture(Gesture.LogoUp, function on_logo_up() {
+    
+    if (pocet_sten == 6) {
+        pocet_sten = 10
+        basic.showNumber(10)
+    } else {
+        pocet_sten = 6
+        basic.showNumber(6)
+    }
+    
+})
 input.onGesture(Gesture.Shake, function on_gesture_shake() {
     let x: number;
     
@@ -113,17 +120,20 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        for (let a = 0; a < pocet_sten; a++) {
-            music.ringTone(Note.C)
+        for (let a = 0; a < x; a++) {
+            music.playTone(Note.E, music.beat(0.4))
+            basic.pause(100)
         }
         povoleno = false
+        basic.pause(1000)
+        basic.showIcon(IconNames.Triangle)
     } else {
         basic.showIcon(IconNames.No)
     }
     
 })
 let povoleno = false
+let pocet_sten = 6
 basic.forever(function on_forever() {
     
 })
-let pocet_sten = 6

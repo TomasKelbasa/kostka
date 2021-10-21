@@ -120,8 +120,8 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
         }
         
         for (let a = 0; a < cislo; a++) {
-            music.playTone(Note.E, music.beat(0.4))
-            basic.pause(100)
+            music.playTone(Note.E, music.beat(4))
+            music.rest(music.beat(2))
         }
         povoleno = false
         basic.pause(1000)

@@ -99,8 +99,8 @@ def on_gesture_shake():
             # . . . #
             """)
         for a in range(cislo):
-            music.play_tone(Note.E, music.beat(0.4))
-            basic.pause(100)
+            music.play_tone(Note.E, music.beat(4))
+            music.rest(music.beat(2))
         povoleno = False
         basic.pause(1000)
         basic.show_icon(IconNames.TRIANGLE)

@@ -7,20 +7,19 @@ input.onGesture(Gesture.LogoUp, function on_logo_up() {
     
     if (pocet_sten == 6) {
         pocet_sten = 10
-        basic.showNumber(10)
     } else {
         pocet_sten = 6
-        basic.showNumber(6)
     }
     
+    basic.showNumber(pocet_sten)
 })
 input.onGesture(Gesture.Shake, function on_gesture_shake() {
-    let x: number;
+    let cislo: number;
     
     
     if (povoleno) {
-        x = randint(1, pocet_sten)
-        if (x == 1) {
+        cislo = randint(1, pocet_sten)
+        if (cislo == 1) {
             basic.showLeds(`
             . . . . .
             . . . . .
@@ -30,7 +29,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 2) {
+        if (cislo == 2) {
             basic.showLeds(`
             . . . . .
             . . . . .
@@ -40,7 +39,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 3) {
+        if (cislo == 3) {
             basic.showLeds(`
             # . . . .
             . . . . .
@@ -50,7 +49,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 4) {
+        if (cislo == 4) {
             basic.showLeds(`
             . . . . .
             . # . # .
@@ -60,7 +59,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 5) {
+        if (cislo == 5) {
             basic.showLeds(`
             # . . . #
             . . . . .
@@ -70,7 +69,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 6) {
+        if (cislo == 6) {
             basic.showLeds(`
             # . . . #
             . . . . .
@@ -80,7 +79,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 7) {
+        if (cislo == 7) {
             basic.showLeds(`
             # . . . #
             . . . . .
@@ -90,7 +89,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 8) {
+        if (cislo == 8) {
             basic.showLeds(`
             # . # . #
             . . . . .
@@ -100,7 +99,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 9) {
+        if (cislo == 9) {
             basic.showLeds(`
             # . # . #
             . . . . .
@@ -110,7 +109,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        if (x == 10) {
+        if (cislo == 10) {
             basic.showLeds(`
             # . . . #
             . # . # .
@@ -120,7 +119,7 @@ input.onGesture(Gesture.Shake, function on_gesture_shake() {
             `)
         }
         
-        for (let a = 0; a < x; a++) {
+        for (let a = 0; a < cislo; a++) {
             music.playTone(Note.E, music.beat(0.4))
             basic.pause(100)
         }

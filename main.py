@@ -4,14 +4,14 @@ def on_button_pressed_a():
     basic.show_icon(IconNames.YES)
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_gesture_logo_up():
+def on_logo_event_pressed():
     global pocet_sten
     if pocet_sten == 6:
         pocet_sten = 10
     else:
         pocet_sten = 6
     basic.show_number(pocet_sten)
-input.on_gesture(Gesture.LOGO_UP, on_gesture_logo_up)
+input.on_logo_event(TouchButtonEvent.PRESSED, on_logo_event_pressed)
 
 def on_gesture_shake():
     global povoleno

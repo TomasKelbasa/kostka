@@ -3,7 +3,7 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     povoleno = true
     basic.showIcon(IconNames.Yes)
 })
-input.onGesture(Gesture.LogoUp, function on_gesture_logo_up() {
+input.onLogoEvent(TouchButtonEvent.Pressed, function on_logo_event_pressed() {
     
     if (pocet_sten == 6) {
         pocet_sten = 10
